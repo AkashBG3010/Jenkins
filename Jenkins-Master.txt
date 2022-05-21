@@ -1,0 +1,161 @@
+AS UBUNTU:    
+    1  history
+    2  sudo su
+    3  exit
+    4  sudo su
+    5  exit
+    6  sudo su
+    7  sudo systemctl status jenkins
+    8  sudo su jenkins
+    9  cat /var/lib/jenkins/secrets/initialAdminPassword
+   10  history
+
+AS ROOT:
+    1  history
+    2  sudo systemctl status jenkins
+    3  sudo ufw allow OpenSSH
+    4  exit
+    5  cd /opt/
+    6  ls
+    7  cd NodeJs-API/
+    8  cat .env
+    9  systemctl stop nginx
+   10  systemctl status nginx
+   11  systemctl start nginx
+   12  systemctl status nginx
+   13  systemctl stop nginx
+   14  nohup npm start &
+   15  cat nohup.out
+   16  systemctl status nginx
+   17  systemctl start nginx
+   18  sudo apt-get remove nginx nginx-common
+   19  sudo apt-get remove nginx* --purge
+   20  sudo apt-get autoremove
+   21  systemctl status nginx
+   22  nohup npm start &
+   23  cat nohup.out
+   24  exit
+   25  apt update
+   26  java -version
+   27  sudo apt install default-jre
+   28  java -version
+   29  sudo apt install default-jdk
+   30  java -version
+   31  sudo apt install default-jre
+   32  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+   33  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+   34  sudo apt update
+   35  sudo apt install jenkins
+   36  apt update
+   37  sudo systemctl status jenkins
+   38  cat /var/lib/jenkins/secrets/initialAdminPassword
+   39  sudo apt-get install -y nodejs
+   40  sudo apt-get install -y npm
+   41  wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+   42  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+   43  sudo apt-get update
+   44  sudo apt-get install -y mongodb-org
+   45  sudo systemctl start mongod
+   46  sudo systemctl status mongod
+   47  cd /opt
+   48  cd NodeJs-API/
+   49  ls
+   50  ls -lrt
+   51  nano .env
+   52  npm install
+   53  npm start
+   54  sudo apt-get install -y nginx
+   55  cd /etc/nginx/sites-available/
+   56  nano node.conf
+   57  sudo rm /etc/nginx/sites-enabled/default
+   58  sudo rm /etc/nginx/sites-available/default
+   59  sudo ln -s /etc/nginx/sites-available/node.conf /etc/nginx/sites-enabled/node.conf
+   60  sudo nginx -t
+   61  sudo systemctl restart nginx
+   62  ls
+   63  cd ..
+   64  cd sites-enabled/
+   65  ls
+   66  nano node.conf
+   67  cd ..
+   68  cd sites-available/
+   69  ls
+   70  nano node.conf
+   71  cat node.conf
+   72  sudo ln -sf /etc/nginx/sites-available/node.conf /etc/nginx/sites-enabled/node.conf
+   73  cd ..
+   74  cd sites-enabled/
+   75  ls
+   76  cat node.conf
+   77  nginx -t
+   78  sudo systemctl restart nginx
+   79  cd /opt/
+   80  ls
+   81  cd no
+   82  cd NodeJs-API/
+   83  ls
+   84  npm start
+   85  cd .ssh
+   86  vi authorized_keys
+   87  cd .ssh
+   88  vi authorized_keys
+   89  clear
+   90  cd ..
+   91  sudo systemctl status jenkins
+   92  cd .ssh
+   93  vi authorized_keys
+   94  cd ..
+   95  sudo su jenkins
+   96  sudo usermod -aG sudo jenkins
+   97  sudo su jenkins
+   98  sudo usermod -aG wheel jenkins
+   99  cd ..
+  100  cd ubuntu/
+  101  cd .ssh
+  102  ls
+  103  vi authorized_keys
+  104  sudo su jenkins
+  105  sudo adduser jenkins sudo
+  106  ls
+  107  vi authorized_keys
+  108  sudo su jenkins
+  109  history
+
+
+AS JENKINS:
+    1  whoami
+    2  ssh-keygen
+    3  cat /var/lib/jenkins/.ssh/id_rsa.pub
+    4  cd .ssh
+    5  sudo cd .ssh
+    6  sudo su
+    7  exit
+    8  ssh-keygen
+    9  cat /var/lib/jenkins/.ssh/id_rsa.pub
+   10  cd .ssh
+   11  sudo su
+   12  exit
+   13  cd .ssh
+   14  sudo usermod -aG wheel jenkins
+   15  exit
+   16  vi authorized_keys
+   17  sudo vi authorized_keys
+   18  sudo adduser jenkins sudo
+   19  exit
+   20  exit
+   21  cd ..
+   22  ls
+   23  cd
+   24  ssh-keygen
+   25  cat
+   26  cat /var/lib/jenkins/.ssh/id_rsa
+   27  cat /var/lib/jenkins/.ssh/id_rsa.pub
+   28  ssh -i "/var/lib/jenkins/.ssh/id_rsa.pub" ubuntu@ec2-52-204-194-206.compute-1.amazonaws.com
+   29  cd /root/.ssh
+   30  cd
+   31  cd /var/lib/jenkins/.ssh/
+   32  ls
+   33  ssh -i id_rsa.pub root@52.204.194.206
+   34  ls -lart
+   35  ssh -i id_rsa root@52.204.194.206
+   36  history

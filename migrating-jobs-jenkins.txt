@@ -1,0 +1,19 @@
+>>>Required two Jenkins Servers
+	1) Master Jenkins Server(Where all jobs is present)
+	2) Recovery Master Jenkins Server(Where the all jobs will be migrated)
+
+
+>>>From "Recovery Master Jenkins Server", 
+	install 'Job Import' plugin
+
+>>>To Configure the plugin,
+	go to: Manage Jenkins > Configure System > 
+	Under Job Import Plugin:
+	"add remote Jenkins"(Add credentials url for "Master Jenkins Server") 
+	save
+
+>>>To Import Jobs,
+	go to Job Import Plugin
+	do configuration
+	select jobs	
+	import

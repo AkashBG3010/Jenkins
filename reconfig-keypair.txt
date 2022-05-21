@@ -1,0 +1,9 @@
+lsblk -f
+sudo mkdir /mnt/tempvol
+sudo mount /dev/xvdf1 /mnt/tempvol
+lsblk -f
+ls -lah
+cp .ssh/authorized_keys /mnt/tempvol/home/ubuntu/.ssh/
+ls -lah /mnt/tempvol/home/ubuntu/.ssh/
+sudo umount  /mnt/tempvol/
+lsblk -f

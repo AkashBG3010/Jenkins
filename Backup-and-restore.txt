@@ -1,0 +1,10 @@
+>>From Jenkins Server GUI,
+search for Thinbackup plugin and install It
+
+>>Go to Thin Backup in Manage Jenkins:
+..To Backup..
+Click on settings and configure
+Click on Backup Now
+
+..To Restore..
+Click on Restore and configure

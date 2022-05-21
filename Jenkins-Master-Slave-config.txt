@@ -1,0 +1,25 @@
+IN SLAVE SERVER:
+
+cd
+sudo adduser jenkins-slave
+sudo usermod -aG sudo jenkins-slave
+sudo su jenkins-slave
+ssh-keygen -t rsa -N "" -f /home/jenkins-slave/.ssh/id_rsa
+cd .ssh
+cat id_rsa.pub > authorized_keys
+chmod 700 authorized_keys
+vi id_rsa
+cd jenkins-slave/
+pwd
+##(Copying Private-key)
+
+
+IN MASTER SERVER:
+
+sudo su
+cd
+cd /var/lib/jenkins/.ssh
+ssh-keyscan -H 172.31.38.42 >>/var/lib/jenkins/.ssh/known_hosts
+#ssh-keyscan -H SLAVE-NODE-IP-OR-HOSTNAME >>/var/lib/jenkins/.ssh/known_hosts
+chown jenkins:jenkins known_hosts
+chmod 700 known_hosts

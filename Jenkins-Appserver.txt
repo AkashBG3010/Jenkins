@@ -1,0 +1,51 @@
+ 97  cd /home/ubuntu
+   98  ssh-keygen
+   99  .ssh/
+  100  cd .ssh/
+  101  ls
+  102  vi authorized_keys
+  103  cd ..
+  104  cd /opt/
+  105  ls
+  106  cat .ssh/authorized_keys
+  107  cd .ssh
+  108  cd ..
+  109  cat .ssh/authorized_keys
+  110  cd home/ubuntu/
+  111  cat .ssh/authorized_keys
+  112  cd /opt
+  113  ls
+  114  cd .ssh
+  115  nano authorized_keys
+  116  vi authorized_keys
+  117  cd ..
+  118  ssh-keygen
+  119  cd .ssh
+  120  cd ..
+  121  cat /root/.ssh/id_rsa.pub
+  122  clear
+  123  cd /opt
+  124  ls
+  125  sudo su jenkins
+  126  ssh-keygen
+  127  cat
+  128  cat /root/.ssh/id_rsa.pub
+  129  cd ..
+  130  cd .ssh
+  131  cd /home/ubuntu/
+  132  cd .ssh
+  133  ls
+  134  vi authorized_keys
+  135  cd ..
+  136  sudo su jenkins
+  137  cd .ssh
+  138  ls
+  139  vi authorized_keys
+  140  cd /root
+  141  cd /.ssh
+  142  cd .ssh
+  143  ls
+  144  pwd
+  145  vi authorized_keys
+  147  curl ifconfig.me
+  146  history
